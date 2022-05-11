@@ -54,7 +54,7 @@ public class NewReviewActivity extends AppCompatActivity {
                 }
             }
         });
-        
+
     }
 
     public void saveReview () {

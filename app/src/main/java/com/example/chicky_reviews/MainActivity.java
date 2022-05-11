@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    //When new review fab is clicked
     public void newReview(){
         Intent reviewIntent = new Intent(this, NewReviewActivity.class);
         this.startActivity(reviewIntent);
