@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Chicky_Reviews</string>
+    <string name="tab_text_1">Reviewed</string>
+    <string name="tab_text_2">Hit List</string>
+
+    <string name="rest_name">Restaurant: </string>
+    <string name="sandwich">Sandie Name: </string>
+
+    <string name="chick_rating_header">CHICKEN</string>
+    <string name="chick_juiciness">juiciness</string>
+    <string name="chick_crunch">crunch</string>
+    <string name="chick_szn">seasoning/taste</string>
+
+    <string name="sauce_rating_header">SAUCE</string>
+    <string name="sauce_spice">spiciness</string>
+    <string name="sauce_taste">taste</string>
+
+    <string name="bun_rating_header">BUN</string>
+    <string name="bun_text">texture</string>
+
+    <string name="extra_header">EXTRAS</string>
+    <string name="extra_name">extra name</string>
+
+    <string name="amount">amount</string>
+
+    <string name="description_header">DESCRIPTION</string>
+    <string name="comment_header">REMARKS</string>
+</resources>
