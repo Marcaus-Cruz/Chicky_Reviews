@@ -1,5 +1,6 @@
 package com.example.chicky_reviews.ui.main.newReview;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.chicky_reviews.R;
+import com.example.chicky_reviews.ui.main.formattedReview.FormattedReview;
 import com.example.chicky_reviews.ui.main.newReview.NewReviewViewModel;
 
 import androidx.annotation.NonNull;
@@ -63,6 +65,9 @@ public class NewReviewActivity extends AppCompatActivity {
 
         //This is where we get all data and save as new review.
         //Add it to existing reviews
+        //prompt review page
+        Intent outputIntent = new Intent(this, FormattedReview.class);
+        this.startActivity(outputIntent);
     }
     public void cancel() {
         Toast.makeText(this, "aborting", Toast.LENGTH_SHORT).show();
