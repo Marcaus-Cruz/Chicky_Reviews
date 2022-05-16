@@ -12,16 +12,19 @@
         tools:layout_editor_absoluteY="1dp">
 
         <ScrollView
+            android:id="@+id/new_review_scroll"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:padding="20dp">
 
             <LinearLayout
+                android:id="@+id/new_review_parent_lo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/resty_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -45,6 +48,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/sandie_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -75,6 +79,7 @@
                     android:textAlignment="center"/>
 
                 <LinearLayout
+                    android:id="@+id/crunch_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -92,10 +97,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/chick_juice_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -113,10 +120,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/chick_taste_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -134,6 +143,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
@@ -146,6 +156,7 @@
                     android:textAlignment="center"/>
 
                 <LinearLayout
+                    android:id="@+id/spicy_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -163,10 +174,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:numStars="5" />
+                        android:numStars="5"
+                        android:stepSize=".5"/>
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/sauce_taste_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -184,10 +197,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/sauce_amount_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -205,6 +220,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
@@ -217,6 +233,7 @@
                     android:textAlignment="center"/>
 
                 <LinearLayout
+                    android:id="@+id/bun_text_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -234,10 +251,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/bun_taste_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
@@ -255,6 +274,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:stepSize=".5"
                         android:numStars="5" />
                 </LinearLayout>
 
@@ -276,6 +296,7 @@
                     android:layout_marginBottom="20dp"/>
 
                 <LinearLayout
+                    android:id="@+id/buttons_lo"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal"
