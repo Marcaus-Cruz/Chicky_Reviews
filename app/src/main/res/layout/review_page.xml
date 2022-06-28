@@ -70,222 +70,492 @@
                         android:inputType="textPersonName" />
                 </LinearLayout>
 
-                <TextView
-                    android:id="@+id/chick_section_header"
+                <LinearLayout
+                    android:id="@+id/chicken_root_LL"
                     android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/chick_rating_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/chick_rating_header"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:id="@+id/chicken_second_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/CHICKEN_rating_names"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/crunch_rating_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/chick_crunch" />
+
+                            <TextView
+                                android:id="@+id/juicy_rating_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/chick_juiciness" />
+
+                            <TextView
+                                android:id="@+id/szn_rating_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/chick_szn" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/chick_et_ratings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/chick_crunch_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:id="@+id/chick_juice_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:id="@+id/chick_taste_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/chick_juice_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/chick_juice_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/chick_crunch_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/chick_crunch_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/chick_taste_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/chick_taste_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/sauce_root_LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/sauce_rating_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/sauce_rating_header"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:id="@+id/sauce_second_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/SAUCE_rating_names"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="left"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/sauce_spice_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/sauce_spice" />
+
+                            <TextView
+                                android:id="@+id/sauce_taste_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/sauce_taste" />
+
+                            <TextView
+                                android:id="@+id/sauce_amount_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/amount" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/sauce_et_ratings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/sauce_spice_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:id="@+id/sauce_taste_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:id="@+id/sauce_amount_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/sauce_spice_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/sauce_spice_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/sauce_taste_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/sauce_taste_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/sauce_amount_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/sauce_amount_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bun_root_LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bun_rating_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/bun_rating_header"
+                        android:textAlignment="center" />
+
+                    <LinearLayout
+                        android:id="@+id/bun_second_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/BUN_rating_names"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bun_text_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/bun_text" />
+
+                            <TextView
+                                android:id="@+id/bun_taste_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:text="@string/sauce_taste" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bun_et_ratings"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <EditText
+                                android:id="@+id/bun_texture_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+
+                            <EditText
+                                android:id="@+id/bun_taste_rating"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:ems="4"
+                                android:gravity="center"
+                                android:inputType="numberDecimal"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/bun_texture_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/bun_texture_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <ImageButton
+                                    android:id="@+id/bun_taste_increment"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_remove" />
+
+                                <ImageButton
+                                    android:id="@+id/bun_taste_decrement"
+                                    android:layout_width="50dp"
+                                    android:layout_height="50dp"
+                                    android:src="@drawable/ic_add_black" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/add_extra_button"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/chick_rating_header"
                     android:layout_gravity="center"
-                    android:textAlignment="center"/>
-
-                <LinearLayout
-                    android:id="@+id/crunch_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/crunch_rating_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/chick_crunch" />
-
-                    <RatingBar
-                        android:id="@+id/chick_crunch_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/chick_juice_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/juicy_rating_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/chick_juiciness" />
-
-                    <RatingBar
-                        android:id="@+id/chick_juice_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/chick_taste_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/szn_rating_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/chick_szn" />
-
-                    <RatingBar
-                        android:id="@+id/chick_taste_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
+                    android:padding="10dp"
+                    android:text="+Extra" />
 
                 <TextView
-                    android:id="@+id/sauce_rating_header"
+                    android:id="@+id/intro_header"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/sauce_rating_header"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"/>
-
-                <LinearLayout
-                    android:id="@+id/spicy_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/sauce_spice_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/sauce_spice" />
-
-                    <RatingBar
-                        android:id="@+id/sauce_spice_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:numStars="5"
-                        android:stepSize=".5"/>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sauce_taste_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/sauce_taste_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/sauce_taste" />
-
-                    <RatingBar
-                        android:id="@+id/sauce_taste_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/sauce_amount_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/sauce_amount_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/amount" />
-
-                    <RatingBar
-                        android:id="@+id/sauce_amount_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/bun_rating_header"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/bun_rating_header"
-                    android:layout_gravity="center"
-                    android:textAlignment="center"/>
-
-                <LinearLayout
-                    android:id="@+id/bun_text_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/bun_text_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/bun_text" />
-
-                    <RatingBar
-                        android:id="@+id/bun_text_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/bun_taste_lo"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="horizontal"
-                    android:layout_marginBottom="20dp">
-
-                    <TextView
-                        android:id="@+id/bun_taste_label"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="@string/sauce_taste" />
-
-                    <RatingBar
-                        android:id="@+id/bun_taste_rating"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:stepSize=".5"
-                        android:numStars="5" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/description_header"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Description" />
+                    android:layout_marginTop="10dp"
+                    android:text="Introduction:" />
 
                 <EditText
-                    android:id="@+id/description_input"
+                    android:id="@+id/intro_input"
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:padding="20dp"
@@ -294,6 +564,25 @@
                     android:gravity="start|top"
                     android:inputType="textMultiLine"
                     android:layout_marginBottom="20dp"/>
+
+                <TextView
+                    android:id="@+id/final_thoughts_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Thoughts:" />
+
+                <EditText
+                    android:id="@+id/final_thoughts_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:padding="20dp"
+
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:layout_marginBottom="20dp"/>
+
 
                 <LinearLayout
                     android:id="@+id/buttons_lo"

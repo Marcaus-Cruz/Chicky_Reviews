@@ -3,10 +3,10 @@
     <string name="tab_text_1">Reviewed</string>
     <string name="tab_text_2">Hit List</string>
 
-    <string name="rest_name">Restaurant: </string>
-    <string name="sandwich">Sandie Name: </string>
+    <string name="rest_name">RESTAURANT </string>
+    <string name="sandwich">SANDIE NAME </string>
 
-    <string name="chick_rating_header">CHICKEN</string>
+    <string name="chick_rating_header">CHICKEN </string>
     <string name="chick_juiciness">juiciness</string>
     <string name="chick_crunch">crunch</string>
     <string name="chick_szn">seasoning/taste</string>
