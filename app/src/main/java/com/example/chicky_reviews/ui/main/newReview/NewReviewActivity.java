@@ -131,7 +131,7 @@ public class NewReviewActivity extends AppCompatActivity {
                             //Should be childView.getChildCount?
                             for (int k = 0; k < ((LinearLayout) parent.getChildAt(j)).getChildCount(); k++) {
                                 try {
-                                    if(getResources().getResourceEntryName(((LinearLayout)parent.getChildAt(j)).getChildAt(k).getId()).contains("_et_")){
+                                    if(getResources().getResourceEntryName(((LinearLayout) parent.getChildAt(j)).getChildAt(k).getId()).contains("_et_")){
                                         // Found ratings, iterate through, assuming LL = (category)_et_ratings
                                         //Loop through individual ratings
                                         LinearLayout ratings = (LinearLayout) ((LinearLayout) parent.getChildAt(j)).getChildAt(k);
@@ -145,6 +145,7 @@ public class NewReviewActivity extends AppCompatActivity {
                                         }
                                     }
                                 } catch (Resources.NotFoundException e) {
+                                    //ID does not exist
                                     e.printStackTrace();
                                 } catch (NumberFormatException e) {
                                     e.printStackTrace();
@@ -165,10 +166,8 @@ public class NewReviewActivity extends AppCompatActivity {
         //prompt review page
         Intent outputIntent = new Intent(this, FormattedReview.class);
 
-        //Band-aid
-        ArrayList<Review> newReviewArrayList = new ArrayList<Review>();
-        newReviewArrayList.add(newReview);
-        outputIntent.putExtra("newReviewArrayList", newReviewArrayList);
+        // Calling a Parcel: https://stackoverflow.com/questions/49249234/what-is-parcelable-in-android
+        outputIntent.putExtra("newReview", newReview);
 
         this.startActivity(outputIntent);
     }

@@ -4,23 +4,20 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.lang.reflect.Array;
+import com.example.chicky_reviews.Category;
 import java.util.ArrayList;
 
 public class Review implements Parcelable {
     /* Fields */
-    private String reviewName;
-
     private String intro;
     private String restName;
     private String sandwichName;
     private String conclusion;
-
     private ArrayList<Category> categories;
 
     /* Constructors */
     public Review(String restName, String sandwichName
     ) {
-        this.reviewName = restName + " -> " + sandwichName;
         this.intro = "";
         this.restName = restName;
         this.sandwichName = sandwichName;
@@ -31,7 +28,6 @@ public class Review implements Parcelable {
     }
 
     public Review(String restName, String sandwichName, ArrayList<Category> categories) {
-        this.reviewName = restName + " -> " + sandwichName;
         this.intro = "";
         this.restName = restName;
         this.sandwichName = sandwichName;
@@ -47,10 +43,6 @@ public class Review implements Parcelable {
 
     public String getConclusion() {
         return this.conclusion;
-    }
-
-    public String getReviewName() {
-        return this.reviewName;
     }
 
     public String getRestName() {
@@ -93,17 +85,23 @@ public class Review implements Parcelable {
     }
 
     // Parcelling part
+    // Ressies
     // https://www.vogella.com/tutorials/AndroidParcelable/article.html
     // https://stackoverflow.com/questions/7181526/how-can-i-make-my-custom-objects-parcelable
+    // https://stackoverflow.com/questions/22446359/android-class-parcelable-with-arraylist
+    // https://stackoverflow.com/questions/59453520/use-of-classloader-in-parcelable-readarraylist-in-android
+    // https://guides.codepath.com/android/using-parcelable
+    // https://stackoverflow.com/questions/49249234/what-is-parcelable-in-android
+
+
     public Review(Parcel in){
-        this.reviewName = in.readString();
         this.intro = in.readString();
         this.restName = in.readString();
         this.sandwichName = in.readString();
         this.conclusion = in.readString();
 
-        //KEYLIME
-        //this.categories = in.readArrayList(null, Category);
+        this.categories = in.readArrayList(Category.class.getClassLoader());
+        //this.categories = in.readArrayList(null);
     }
 
     @Override
@@ -113,6 +111,23 @@ public class Review implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags){
-        //dest.write
+        dest.writeString(this.intro);
+        dest.writeString(this.restName);
+        dest.writeString(this.sandwichName);
+        dest.writeString(this.conclusion);
+
+        //dest.writeParcelableArray(this.categories);
+        dest.writeList(this.categories);
     }
+
+    public static final Parcelable.Creator<Review> CREATOR = new Parcelable.Creator<Review>(){
+        @Override
+        public Review createFromParcel(Parcel in){
+            return new Review(in);
+        }
+        @Override
+        public Review[] newArray(int size){
+            return new Review[size];
+        }
+    };
 }

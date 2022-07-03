@@ -17,8 +17,19 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled false //Potentially remove this
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug{
+            // https://stackoverflow.com/questions/34566901/in-android-studio-2-0-cannot-find-local-variable-of-method-in-debug-mode
+            //Uncomment 1 by 1 and see if it works
+
+            //testCoverageEnabled false
+            //minifyEnabled = false
+            //debuggable = true
+            // jackOptions {
+            //            enabled false
+            //        }
         }
     }
     compileOptions {

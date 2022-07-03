@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.chicky_reviews.R;
 import com.example.chicky_reviews.Review;
+import com.example.chicky_reviews.*;
+import com.example.chicky_reviews.Rating;
+import com.example.chicky_reviews.Category;
 
 import java.util.ArrayList;
 
@@ -20,7 +23,8 @@ public class FormattedReview extends AppCompatActivity {
         setContentView(R.layout.output_page);
         root = findViewById(R.id.output_root_ll);
 
-        Review newReview = (Review)((ArrayList)getIntent().getSerializableExtra("newReviewArrayList")).get(0);
+        Bundle data = getIntent().getExtras();
+        Review newReview = data.getParcelable("newReview");
 
         EditText formattedOutput = new EditText(this);
         String totalString = "Location: " + newReview.getRestName() + "\n";
