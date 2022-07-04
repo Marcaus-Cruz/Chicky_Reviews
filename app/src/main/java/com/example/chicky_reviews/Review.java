@@ -1,7 +1,10 @@
 package com.example.chicky_reviews;
 
+import android.os.Build;
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import androidx.annotation.RequiresApi;
 
 import java.lang.reflect.Array;
 import com.example.chicky_reviews.Category;
@@ -14,6 +17,9 @@ public class Review implements Parcelable {
     private String sandwichName;
     private String conclusion;
     private ArrayList<Category> categories;
+    private Boolean hasExtra;
+    private Double totalRating;
+    private Double extraTotalRating;
 
     /* Constructors */
     public Review(String restName, String sandwichName
@@ -23,8 +29,9 @@ public class Review implements Parcelable {
         this.sandwichName = sandwichName;
         this.conclusion = "";
         this.categories = new ArrayList<Category>();
-
-
+        this.hasExtra = false;
+        this.totalRating = 0.0;
+        this.extraTotalRating = 0.0;
     }
 
     public Review(String restName, String sandwichName, ArrayList<Category> categories) {
@@ -33,6 +40,9 @@ public class Review implements Parcelable {
         this.sandwichName = sandwichName;
         this.conclusion = "";
         this.categories = categories;
+        this.hasExtra = false;
+        this.totalRating = 0.0;
+        this.extraTotalRating = 0.0;
     }
 
     /* Accessors */
@@ -57,6 +67,12 @@ public class Review implements Parcelable {
         return this.categories;
     }
 
+    public Boolean getHasExtra(){return this.hasExtra;}
+
+    public Double getTotalRating(){return this.totalRating;}
+
+    public Double getExtraTotalRating(){return this.extraTotalRating;}
+
     /* Mutators */
     public void setIntro(String intro) {
         this.intro = intro;
@@ -78,6 +94,12 @@ public class Review implements Parcelable {
         this.categories = cats;
     }
 
+    public void setHasExtra(Boolean hasExtra){this.hasExtra = hasExtra;}
+
+    public void setTotalRating(Double totalRating){this.totalRating = totalRating;}
+
+    public void setExtraTotalRating(Double extraTotalRating){this.extraTotalRating = extraTotalRating;}
+
     public void addCategory(Category cat) {
         if (!this.categories.contains(cat)) {
             this.categories.add(cat);
@@ -94,14 +116,16 @@ public class Review implements Parcelable {
     // https://stackoverflow.com/questions/49249234/what-is-parcelable-in-android
 
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     public Review(Parcel in){
         this.intro = in.readString();
         this.restName = in.readString();
         this.sandwichName = in.readString();
         this.conclusion = in.readString();
-
         this.categories = in.readArrayList(Category.class.getClassLoader());
-        //this.categories = in.readArrayList(null);
+        this.hasExtra = in.readBoolean();
+        this.totalRating = in.readDouble();
+        this.extraTotalRating = in.readDouble();
     }
 
     @Override
@@ -109,18 +133,21 @@ public class Review implements Parcelable {
         return 0;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.Q)
     @Override
     public void writeToParcel(Parcel dest, int flags){
         dest.writeString(this.intro);
         dest.writeString(this.restName);
         dest.writeString(this.sandwichName);
         dest.writeString(this.conclusion);
-
-        //dest.writeParcelableArray(this.categories);
         dest.writeList(this.categories);
+        dest.writeBoolean(this.hasExtra);
+        dest.writeDouble(this.totalRating);
+        dest.writeDouble(this.extraTotalRating);
     }
 
     public static final Parcelable.Creator<Review> CREATOR = new Parcelable.Creator<Review>(){
+        @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public Review createFromParcel(Parcel in){
             return new Review(in);

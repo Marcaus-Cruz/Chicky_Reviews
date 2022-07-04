@@ -134,6 +134,9 @@ public class NewReviewActivity extends AppCompatActivity {
                                     if(getResources().getResourceEntryName(((LinearLayout) parent.getChildAt(j)).getChildAt(k).getId()).contains("_et_")){
                                         // Found ratings, iterate through, assuming LL = (category)_et_ratings
                                         //Loop through individual ratings
+                                        if(k == 3){
+                                            newReview.setHasExtra(true);
+                                        }
                                         LinearLayout ratings = (LinearLayout) ((LinearLayout) parent.getChildAt(j)).getChildAt(k);
                                         for(int l = 0; l < ratings.getChildCount(); l++){
                                             //Looping through ETs
