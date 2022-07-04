@@ -35,6 +35,7 @@ public class FormattedReview extends AppCompatActivity {
     }
 
     public Double calcAverageCategoryRating(Category currentCategory){
+        // if a rating is empty, don't include in average (rating == 0.0)
         Double average = 0.0;
         for(int i = 0; i < currentCategory.getNumberOfRatings(); i++){
             Rating currentRating = currentCategory.getCurrentRating(i);

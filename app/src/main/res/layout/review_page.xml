@@ -70,6 +70,24 @@
                         android:inputType="textPersonName" />
                 </LinearLayout>
 
+                <TextView
+                    android:id="@+id/intro_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Introduction:" />
+
+                <EditText
+                    android:id="@+id/intro_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:padding="20dp" />
+
                 <LinearLayout
                     android:id="@+id/chicken_root_LL"
                     android:layout_width="match_parent"
@@ -546,24 +564,6 @@
                     android:layout_gravity="center"
                     android:padding="10dp"
                     android:text="+Extra" />
-
-                <TextView
-                    android:id="@+id/intro_header"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Introduction:" />
-
-                <EditText
-                    android:id="@+id/intro_input"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:padding="20dp"
-
-                    android:ems="10"
-                    android:gravity="start|top"
-                    android:inputType="textMultiLine"
-                    android:layout_marginBottom="20dp"/>
 
                 <TextView
                     android:id="@+id/final_thoughts_header"
